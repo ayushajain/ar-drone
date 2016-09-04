@@ -1,10 +1,8 @@
 import pygame
 import lib.libardrone as libardrone
 
-drone = None
 
 def main():
-    global drone
 
     pygame.init()
     W, H = 320, 240
@@ -41,16 +39,16 @@ def main():
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False 
+                running = False
             elif event.type == pygame.KEYUP:
                 drone.hover()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     drone.reset()
                     running = False
-                # takeoff / lan
                 else:
-                    CONTROLS.get(event.key, test)()
+                    # drone controls
+                    CONTROLS.get(event.key, default)()
 
                 # speed
                 drone.speed = SPEED.get(event.key, drone.speed)
@@ -76,7 +74,7 @@ def main():
     drone.halt()
     print "Ok."
 
-def test():
+def default():
     pass
 
 if __name__ == '__main__':
