@@ -1,0 +1,22 @@
+{
+  "name": "ar-drone",
+  "version": "1.0.0",
+  "description": "ar-drone project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushajain/ar-drone.git"
+  },
+  "keywords": [
+    "drone"
+  ],
+  "author": "Ayush Jain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayushajain/ar-drone/issues"
+  },
+  "homepage": "https://github.com/ayushajain/ar-drone#readme"
+}
